@@ -7,7 +7,7 @@ HASH=$(git rev-parse --short HEAD)
 echo "Using Git hash: $HASH"
 
 # Update the CSS reference (with or without existing ?v=) in index.html
-sed -i '' -E "s|style\.css(\?v=[a-zA-Z0-9]*)?|styles.css?v=$HASH|" index.html
+sed -i '' -E "s|style\.css(\?v=[a-zA-Z0-9]*)?|style.css?v=$HASH|" index.html
 
 # Update the JS reference (with or without existing ?v=) in index.html
 sed -i '' -E "s|script\.js(\?v=[a-zA-Z0-9]*)?|script.js?v=$HASH|" index.html
