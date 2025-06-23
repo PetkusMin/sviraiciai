@@ -5,14 +5,14 @@
   justify-content: center;
   align-items: center;
 
-  height: calc(60vh - 60px);
+  height: calc(80vh - 60px);
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
   
 
   /* Apple style glass background */
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -44,8 +44,8 @@ body {
 }
 
 .countdown-container h1, #countdown {
-  color: #ececec;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  color: #1f1f1f;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
 }
 /* Responsive for smaller devices */
 @media (max-width: 600px) {
@@ -71,12 +71,13 @@ body {
   bottom: 0;
   width: 100%;
   padding: 10px 0;
-  background: rgba(0, 0, 0, 0.0);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(6px);
-  color: #ececec;
+  color: #1f1f1f;
   font-size: 14px;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 20px 20px;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.3);
 }
