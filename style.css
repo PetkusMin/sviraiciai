@@ -1,45 +1,57 @@
-/* Ensure html and body take full height */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+/* Center countdown container using flexbox */
+.countdown-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* center vertically */
-  align-items: center;     /* center horizontally */
-}
+  justify-content: center;
+  align-items: center;
 
-/* Main content takes remaining space between header and footer */
-main {
-  flex: 1;
-  padding: 2em;
+  height: calc(100vh - 60px); /* leave space for footer */
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Footer is fixed at the bottom of the page */
-.footer {
-  text-align: center;
-  color: #666;
-  font-size: 0.9em;
-  padding: 1em;
-  margin-top: auto; /* push footer to bottom if content is short */
+/* Set global font family */
+body {
+  font-family: 'Inter', sans-serif;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Make h1 responsive */
+.countdown-container h1 {
+  font-size: 5vw;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* Responsive for smaller devices */
 @media (max-width: 600px) {
-  main {
-    padding: 1em;
+  .countdown-container h1 {
+    font-size: 5vw;
   }
+}
 
-  .footer {
-    font-size: 0.8em;
-    padding: 0.5em;
-  }
+/* Countdown numbers */
+#countdown {
+  font-size: 6vw;
+  font-weight: 600;
+}
 
+@media (max-width: 600px) {
   #countdown {
-    font-size: 1.2em;
+    font-size: 5vw;
   }
+}
+
+/* Footer fixed at bottom */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #f8f8f8;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  color: #333;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
 }
