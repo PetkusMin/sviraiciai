@@ -17,7 +17,7 @@ echo "Comment: $USER_COMMENT"
 echo "----------------------------------"
 
 # Update version in index.html (CSS and JS with cache busting)
-sed -i '' -E "s|styles\.css(\?v=[a-zA-Z0-9]*)?|styles.css?v=$HASH|" index.html
+sed -i '' -E "s|style\.css(\?v=[a-zA-Z0-9]*)?|style.css?v=$HASH|" index.html
 sed -i '' -E "s|script\.js(\?v=[a-zA-Z0-9]*)?|script.js?v=$HASH|" index.html
 
 # Stage all changes

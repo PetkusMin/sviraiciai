@@ -40,43 +40,4 @@ body {
 .countdown-container h1 {
   font-size: 5vw;
   margin-bottom: 20px;
-  font-weight: 400;
-}
-.countdown-container h1,
-#countdown {
-  color: #ececec;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-}
-/* Responsive for smaller devices */
-@media (max-width: 600px) {
-  .countdown-container h1 {
-    font-size: 5vw;
-  }
-}
-
-/* Countdown numbers */
-#countdown {
-  font-size: 6vw;
-  font-weight: 600;
-}
-
-@media (max-width: 600px) {
-  #countdown {
-    font-size: 5vw;
-  }
-}
-/* Signature fixed at bottom */
-.signature {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 10px 0;
-  background: rgba(0, 0, 0, 0.0);
-  backdrop-filter: blur(6px);
-  color: #ececec;
-  font-size: 14px;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0px 0px 20px 20px;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-}
+  font-we
