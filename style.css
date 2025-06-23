@@ -38,9 +38,18 @@ body {
 
 /* Make h1 responsive */
 .countdown-container h1 {
-  font-size: 5vw;
-  margin-bottom: 20px;
-  font-weight: 400;
+  font-size: 3vw;
+  font-weight: 800;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.countdown-container h2 {
+  font-size: 3vw;
+  font-weight: 200;
+}
+
+#main-title{
+  margin-top: 100px;
 }
 
 .countdown-container h1, #countdown {
@@ -50,14 +59,15 @@ body {
 /* Responsive for smaller devices */
 @media (max-width: 600px) {
   .countdown-container h1 {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 }
 
 /* Countdown numbers */
 #countdown {
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 600;
+  margin-bottom: 150px;
 }
 
 @media (max-width: 600px) {
