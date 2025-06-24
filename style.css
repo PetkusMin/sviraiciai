@@ -57,7 +57,7 @@ body {
 /* Responsive for smaller devices */
 @media (max-width: 600px) {
   .countdown-container h1 {
-    font-size: 5vw;
+    font-size: 2em;
   }
 }
 
