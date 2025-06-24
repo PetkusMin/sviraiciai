@@ -71,7 +71,7 @@ body {
 
 @media (max-width: 600px) {
   #countdown {
-    font-size: 5vw;
+    font-size: 3em;
   }
 }
 /* Signature fixed at bottom */
