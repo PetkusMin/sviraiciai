@@ -1,96 +1,4 @@
-/* Center countdown container using flexbox */
-.countdown-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 40px;
-  text-align: center;
-  box-sizing: border-box;
-  max-width: 600px;
-  
-
-  /* Apple style glass background */
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 90%;
-  margin: auto;
-}
-
-/* Set global font family */
-body {
-  font-family: 'Inter', sans-serif;
-}
-
-body {
-  margin-top: 50px;
-  font-family: 'Inter', sans-serif;
-  background-size: cover;
-}
-
-/* Make h1 responsive */
-.countdown-container h1 {
-  font-size: 2em;
-  font-weight: 800;
-  margin-block-start: 5px;
-  margin-block-end: 5px;
-}
-.countdown-container h2 {
-  font-size: 2em;
-  font-weight: 200;
-  margin-block-start: 5px;
-  margin-block-end: 5px;
-}
-
-#main-title{
-  margin-top: 5%;
-}
-
-.countdown-container h1, #countdown {
-  color: #1f1f1f;
-  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
-}
-/* Responsive for smaller devices */
-@media (max-width: 600px) {
-  .countdown-container h1 {
-    font-size: 2em;
-  }
-}
-
-/* Countdown numbers */
-#countdown {
-  font-size: 3em;
-  font-weight: 600;
-  margin-top: 3%;
-  margin-bottom: 5%;
-}
-
-@media (max-width: 600px) {
-  #countdown {
-    font-size: 3em;
-  }
-}
-/* Signature fixed at bottom */
-.signature {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 10px 0;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(6px);
-  color: #1f1f1f;
-  font-size: 14px;
-  text-align: center;
-  font-weight: 500;
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: 0px 0px 20px 20px;
-  text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.3);
-}
-
+/* Reset + globals */
 * {
   margin: 0;
   padding: 0;
@@ -98,92 +6,193 @@ body {
 }
 
 body {
-  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
   background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
-  overflow: hidden;
+  min-height: 100vh;
+  margin-top: 50px;
+  background-size: cover;
+  color: #ccc;
 }
 
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Countdown */
+.countdown-box {
+  background-color: #1a1c2b;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.countdown-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+}
+
+.countdown {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffcc66;
+}
+
+.signature {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Team boxes */
+.table-box {
+  background-color: #1a1c2b;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  overflow-x: auto; 
+}
+
+h3 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.teams {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team {
+  flex: 1;
+  min-width: 220px;
+}
+
+.team h4 {
+  text-align: center;
+  background-color: #292c3e;
+  margin: 0;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: #fff;
+}
+
+.team ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  background-color: #1f202c;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  min-height: 120px;
+}
+
+.team ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid #333;
+  color: #ccc;
+}
+
+.note {
+  color: #aaa;
+  font-style: italic;
+  padding-top: 10px;
+}
+
+/* Table styles */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 480px;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #292c3e;
+  color: #fff;
+}
+
+td {
+  background-color: #1f202c;
+  color: #ccc;
+}
+
+/* Keep full table on mobile */
+@media (max-width: 768px) {
+  .fixed-table,
+  .fixed-table thead,
+  .fixed-table tbody,
+  .fixed-table th,
+  .fixed-table td,
+  .fixed-table tr {
+    display: table;
+    width: auto;
+  }
+
+  .fixed-table thead {
+    display: table-header-group;
+  }
+
+  .fixed-table td::before {
+    content: none !important;
+  }
+
+  .teams {
+    flex-direction: column;
+  }
+}
+
+/* Stars background (as you had) */
 .stars {
   width: 1px;
   height: 1px;
   position: absolute;
   background: white;
-  box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
+  box-shadow:
+    2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
     22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
     38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
     53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
     68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
     83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
-    98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
-    18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
-    35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
-    50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
-    65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
-    80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
-    95vw 75vh 2px white;
+    98vw 35vh 2px white, 5vw 60vh 1px white;
   animation: twinkle 8s infinite linear;
 }
 
-.shooting-star {
-  position: absolute;
-  width: 100px;
-  height: 2px;
-  background: linear-gradient(90deg, white, transparent);
-  animation: shoot 3s infinite ease-in;
-}
-
-.shooting-star:nth-child(1) {
-  top: 20%;
-  left: -100px;
-  animation-delay: 0s;
-}
-
-.shooting-star:nth-child(2) {
-  top: 35%;
-  left: -100px;
-  animation-delay: 1s;
-}
-
-.shooting-star:nth-child(3) {
-  top: 50%;
-  left: -100px;
-  animation-delay: 2s;
-}
-
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.4;
-  }
-}
-
-@keyframes shoot {
-  0% {
-    transform: translateX(0) translateY(0) rotate(25deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(120vw) translateY(50vh) rotate(25deg);
-    opacity: 0;
-  }
-}
-
-/* Additional twinkling stars with different animation timing */
 .stars::after {
   content: "";
   position: absolute;
   width: 1px;
   height: 1px;
   background: white;
-  box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
+  box-shadow:
+    8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
     33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
     57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white,
-    81vw 48vh 1px white, 89vw 32vh 2px white, 97vw 45vh 1px white,
-    3vw 68vh 2px white, 11vw 75vh 1px white, 19vw 82vh 2px white,
-    27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
-    51vw 92vh 2px white, 59vw 78vh 1px white;
+    81vw 48vh 1px white;
   animation: twinkle 6s infinite linear reverse;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.3; }
 }
